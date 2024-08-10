@@ -1,0 +1,102 @@
+* {
+    font-family: "Roboto Mono",monospace;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /*Щоб правильно рахувало ширину елементів*/
+    }
+
+    body{
+        background: #039cdd;
+    }
+
+    .screen{
+        height: 100vh;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        opacity: 0;
+        width: 100%;
+        background:  #039cdd;
+        transition: all 0.3s;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 35px;
+     
+    }
+
+    .screen.active {
+        z-index: 1;
+        opacity: 1;
+    }
+
+    h1,
+    p {
+        color: rgb(0, 0, 0);
+        text-align: center;
+    }
+    .btn{
+        padding: 10px 15px;
+        width: 280px;
+        font-size: 25px;
+        border-radius: 10px;
+        border: 2px solid rgb(8, 8, 8);
+    }
+
+    .quiz_question {
+        font-size: 35px;
+    }
+
+    .quiz_answers{
+        display: flex;
+        gap: 25px;
+    }
+
+    .answer {
+        padding: 10px;
+        font-size: 20px;
+        border-radius: 17px;
+        border: 1px solid black;
+    }
+
+    button{
+        cursor: pointer;
+        transition: all 0.5s;
+    }
+
+    button:hover {
+        transform: scale(1.1);
+    }
+
+    .quiz_counter{
+        position: absolute;
+        left: 30px;
+        top: 30px;
+        font-size: 19px;
+    }
+
+    .result_title{
+        max-width: 500px;
+    }
+
+    button:disabled,
+    button[disabled] {
+        background-color: rgb(243, 211, 247);
+        color: rgb(14, 13, 13);
+    }
+
+    .timer{
+        position: absolute;
+        right: 30px;
+        top: 15px;
+        font-size: 30px;
+        border: 5px inset rgb(39, 25, 234);
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        text-align: center;
+        line-height: 57px;
+        color: #fdf9f9
+    }
